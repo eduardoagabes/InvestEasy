@@ -8,12 +8,149 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="InvestEasy"
+        android:textSize="40sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="32dp"
+        android:textStyle="italic"
+        android:textSize="16sp"
+        android:text="Calcula el rendimiento de tu inversión con aporte mensual, meses y porcentaje de interés."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+
+    <TextView
+        android:id="@+id/label_contribuicion_mensual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="16dp"
+        android:text="Contribución mensual:"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_contribuicion_mensual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_contribuicion_mensual">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_contribuicion_mensual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Introduzca el valor"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/label_cantidad_meses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Cantidad de meses:"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@+id/label_contribuicion_mensual"
+        app:layout_constraintTop_toBottomOf="@+id/til_contribuicion_mensual" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_cantidad_meses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_cantidad_meses">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_cantidad_meses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número de meses"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/label_interes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Interés %"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@+id/label_cantidad_meses"
+        app:layout_constraintTop_toBottomOf="@+id/til_cantidad_meses" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_interes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_interes">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_interes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="introducir interés"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/btn_limpiar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="4dp"
+        android:text="Limpiar"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_interes" />
+
+    <Button
+        android:id="@+id/btn_calcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/til_interes" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
