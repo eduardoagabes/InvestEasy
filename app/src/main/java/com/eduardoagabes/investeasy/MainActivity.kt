@@ -13,7 +13,7 @@ import kotlin.math.pow
 
 class MainActivity : AppCompatActivity() {
 
-    private  lateinit var  binding: ActivityMainBinding
+    private lateinit var  binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,20 +66,13 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("totalInteres", totalInteres)
 
                 startActivity(intent)
-
             }
         }
 
-        val totalMensualInput = binding.tieContribuicionMensual
-        val mesesInput = binding.tieCantidadMeses
-        val interesInput = binding.tieInteres
-
-        val btnLimpiar = binding.btnLimpiar
-
-        btnLimpiar.setOnClickListener {
-            mesesInput.setText("")
-            totalMensualInput.setText("")
-            interesInput.setText("")
+        binding.btnLimpiar.setOnClickListener {
+            contribuicionMensual.setText("")
+            cantidadMeses.setText("")
+            interes.setText("")
         }
     }
 }
