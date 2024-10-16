@@ -1,22 +1,11 @@
-# Barbacometro 🍺🥩
+# InvestEasy 💰📊
 
-El Barbacometro es una aplicación desarrollada para calcular la cantidad necesaria de carne, cerveza y refresco para un asado entre amigos, basada en la cantidad de adultos, niños y la duración del evento. La aplicación ajusta las cantidades de manera precisa para garantizar que todos los invitados estén bien servidos.
-
-# Funcionalidades
-📲 Ingreso de datos: El usuario introduce el número de adultos, niños y la duración del asado.
-
-🚫 Validación de campos: Se verifica que todos los campos estén llenos antes de realizar el cálculo, garantizando que la información sea precisa.
-
-🥩 Cantidad total de carne: La aplicación muestra la cantidad de carne necesaria considerando el número de adultos y niños.
-
-🍺 Cantidad total de cerveza: Se calcula la cantidad de cerveza requerida en función del número de adultos.
-
-🥤 Cantidad total de refresco: Se determina la cantidad de refresco, especialmente para las personas que no consumen alcohol y para los niños.
+InvestEasy es una app Android nativa, desarrollada en Kotlin, que calcula rendimientos de inversión según un porcentaje de interés mensual. El usuario ingresa el aporte mensual, los meses y el interés, y la app muestra el total invertido y los rendimientos por separado.
 
 ## 📸 Screenshots
 
-<img src="https://github.com/user-attachments/assets/8461d786-bd36-4355-ac6e-da54065d89fc" width=260/>
-<img src="https://github.com/user-attachments/assets/8a3be633-4e24-4961-ba8b-f332c4498fb1" width=260/>
+<img src="https://github.com/user-attachments/assets/28f829fe-6151-4bd9-a27a-465993342c80" width=260/>
+<img src="https://github.com/user-attachments/assets/1e588c7b-2dd3-4ebb-84e1-bcc1fde51eb8" width=260/>
 
 ## Tecnologías
 
